@@ -1,0 +1,6 @@
+<svg width="162" height="32" viewBox="0 0 162 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TopZero">
+  <circle cx="16" cy="16" r="15" fill="#047857"/>
+  <circle cx="16" cy="16" r="15" fill="none" stroke="#34D399" stroke-width="2"/>
+  <circle cx="16" cy="16" r="6" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+  <text x="38" y="22" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" letter-spacing="-0.3">Top<tspan fill="#34D399">Zero</tspan></text>
+</svg>
