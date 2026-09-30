@@ -1,30 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTheme } from "next-themes";
 
 interface HeaderProps { }
 const Logo: React.FC<HeaderProps> = () => {
-  const { resolvedTheme } = useTheme();
   return (
-    <Link href="/">
+    <Link href="/" className="flex items-center gap-2 shrink-0">
       <Image
-        src="/images/logo/logo.svg"
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: 'auto', height: 'auto' }}
+        src="/images/logo/topzero-logo.png"
+        alt="TopZero"
+        width={40}
+        height={30}
         quality={100}
-        className='dark:hidden'
       />
-      <Image
-        src="/images/logo/logo-white.svg"
-        alt="logo"
-        width={160}
-        height={50}
-        style={{ width: 'auto', height: 'auto' }}
-        quality={100}
-        className='dark:block hidden'
-      />
+      <span className="text-xl font-bold text-dark dark:text-white">
+        TopZero
+      </span>
     </Link>
   );
 };

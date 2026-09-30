@@ -1,5 +1,6 @@
 "use client";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -31,27 +32,14 @@ const Features = () => {
       >
         <div className="grid grid-cols-12 xl:gap-24 gap-6 gap-y-11 items-center">
           <div className="lg:col-span-6 col-span-12 px-3">
-            <motion.div {...leftAnimation} className="relative w-full max-w-md mx-auto">
-              {/* Abstract "code + growth" illustration — brand graphic, not a real screenshot */}
-              <div className="rounded-2xl bg-dark dark:bg-darkmode shadow-card-shadow p-6 flex flex-col gap-3">
-                <div className="flex items-center gap-1.5 pb-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                  <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
-                </div>
-                <div className="h-3 w-2/3 rounded bg-primary/70" />
-                <div className="h-3 w-5/6 rounded bg-white/15" />
-                <div className="h-3 w-1/2 rounded bg-Sky-mist-blue/60" />
-                <div className="h-3 w-3/4 rounded bg-white/15" />
-                <div className="h-3 w-2/5 rounded bg-primary/70" />
-              </div>
-              <div className="absolute -bottom-6 -left-4 w-32 rounded-xl bg-white dark:bg-darklight shadow-card-shadow p-4 flex items-center gap-3">
-                <Icon icon="solar:graph-up-bold-duotone" width="26" height="26" className="text-primary shrink-0" />
-                <div className="flex flex-col gap-1.5 w-full">
-                  <span className="h-1.5 w-full rounded bg-Smoke dark:bg-darkmode" />
-                  <span className="h-1.5 w-2/3 rounded bg-Smoke dark:bg-darkmode" />
-                </div>
-              </div>
+            <motion.div {...leftAnimation} className="relative w-full max-w-lg mx-auto">
+              <Image
+                src="/images/home/topzero-features-illustration.png"
+                alt="TopZero builds custom mobile and web apps for iOS and Android, from idea to launch"
+                width={1672}
+                height={941}
+                className="w-full h-auto"
+              />
             </motion.div>
           </div>
           <div className="lg:col-span-6 col-span-12 px-3">

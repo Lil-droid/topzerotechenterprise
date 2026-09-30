@@ -1,55 +1,44 @@
 import React from "react";
+import { notFound } from "next/navigation";
 import ServiceDetail from "@/app/components/ServiceDetail";
+import { services } from "@/data/services";
+import { buildPageMetadata } from "@/lib/seo";
 
 type Props = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: any) {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/service`, {
-      cache: "no-store",
-    });
-    const data = await res.json();
-
-    const service = data.ServicesData.find((item: any) => item.slug === params.slug);
-
-    if (!service) {
-      return {
-        title: "Service Not Found",
-        description: "The requested service could not be found.",
-      };
-    }
-
-    return {
-      title: `${service.title} | SassCandy`,
-      description: service.description,
-      robots: {
-        index: true,
-        follow: true,
-        nocache: true,
-        googleBot: {
-          index: true,
-          follow: false,
-          "max-video-preview": -1,
-          "max-image-preview": "large",
-          "max-snippet": -1,
-        },
-      },
-    };
-  } catch (err) {
-    return {
-      title: "Data Not Fetched",
-      description: "An error occurred while loading this service.",
-    };
-  }
+export function generateStaticParams() {
+  return services.map((service) => ({ slug: service.slug }));
 }
 
-const Page = () => {
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
 
-  return (
-    <ServiceDetail />
-  );
+  if (!service) {
+    return {
+      title: "Service Not Found | TopZero",
+      description: "The requested service could not be found.",
+    };
+  }
+
+  return buildPageMetadata({
+    title: `${service.title} | TopZero`,
+    description: service.description,
+    path: `/services/${service.slug}`,
+  });
+}
+
+const Page = async ({ params }: Props) => {
+  const { slug } = await params;
+  const service = services.find((item) => item.slug === slug);
+
+  if (!service) {
+    notFound();
+  }
+
+  return <ServiceDetail slug={slug} />;
 };
 
 export default Page;
