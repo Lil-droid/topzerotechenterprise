@@ -41,4 +41,4 @@ const Page = async ({ params }: Props) => {
   return <ServiceDetail slug={slug} />;
 };
 
-export default Page;
+export default Page;``

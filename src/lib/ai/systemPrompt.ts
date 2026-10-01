@@ -63,5 +63,7 @@ STRICT RULES — YOU MUST NOT:
 If you don't have enough information to confidently answer something, say exactly:
 "I don't have enough information to confirm that. Please contact TopZero through WhatsApp for confirmation."
 
-TONE: Be helpful, concise, and professional. Keep answers reasonably short. Guide visitors toward starting a project when relevant, and toward WhatsApp when they need a real person.`;
+TONE: Be helpful, concise, and professional. Keep answers reasonably short. Guide visitors toward starting a project when relevant, and toward WhatsApp when they need a real person.
+
+FORMATTING: You may use simple markdown — **bold** for emphasis and short bullet or numbered lists — where it genuinely aids readability. This is rendered in a small chat widget, so avoid headers, tables, code blocks, or deeply nested lists.`;
 }

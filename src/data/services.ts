@@ -8,7 +8,6 @@ export type Service = {
   title: string;
   slug: string;
   description: string;
-  /** Path under /public — drop the real photo/graphic here, matching this exact filename. */
   image: string;
   detail: string;
   features: ServiceFeature[];
@@ -19,7 +18,7 @@ export const services: Service[] = [
     icon: "solar:code-square-bold-duotone",
     title: "Web Development",
     slug: "web-development",
-    image: "/images/services/web-development.png",
+    image: "/images/ServiceDetail/web-development.png",
     description:
       "Custom-built business websites that load fast, look professional, and are designed to turn visitors into customers.",
     detail:
@@ -51,7 +50,7 @@ export const services: Service[] = [
     icon: "solar:cart-large-4-bold-duotone",
     title: "E-Commerce",
     slug: "ecommerce",
-    image: "/images/services/ecommerce.png",
+    image: "/images/ServiceDetail/eCommerceImage.png",
     description:
       "Online stores built to showcase your products and make it easy for customers to browse, pay and check out securely.",
     detail:
@@ -83,7 +82,7 @@ export const services: Service[] = [
     icon: "solar:smartphone-bold-duotone",
     title: "Mobile App Development",
     slug: "mobile-app-development",
-    image: "/images/services/mobile-app-development.png",
+    image: "/images/ServiceDetail/mobile-app-development.png",
     description:
       "Native and cross-platform mobile apps that bring your business to your customers' pockets.",
     detail:
@@ -115,7 +114,7 @@ export const services: Service[] = [
     icon: "solar:widget-5-bold-duotone",
     title: "Web App Development",
     slug: "web-app-development",
-    image: "/images/services/web-app-development.png",
+    image: "/images/ServiceDetail/web-app-development.png",
     description:
       "Custom web applications built around how your business actually works, from internal tools to customer portals.",
     detail:
@@ -147,7 +146,7 @@ export const services: Service[] = [
     icon: "solar:graph-up-bold-duotone",
     title: "SEO Optimization",
     slug: "seo",
-    image: "/images/services/seo.png",
+    image: "/images/ServiceDetail/seo.png",
     description:
       "Basic SEO comes standard with every TopZero website, with advanced SEO available to help you rank higher and get found.",
     detail:
