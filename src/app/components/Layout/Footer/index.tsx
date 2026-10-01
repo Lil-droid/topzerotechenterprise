@@ -17,13 +17,14 @@ const Footer: FC = () => {
         <div className="grid grid-cols-12 sm:gap-1.875 gap-5">
           <div className="lg:col-span-4 col-span-12">
             <div className="md:pe-7.5">
-              <Link href="/">
+              <Link href="/" className="flex items-center gap-2">
                 <Image
-                  src="/images/logo/logo-white.svg"
+                  src="/images/logo/topzero-logo.png"
                   alt="TopZero"
-                  width={151}
-                  height={32}
+                  width={40}
+                  height={30}
                 />
+                <span className="text-xl font-bold text-white">TopZero</span>
               </Link>
               <p className="mb-0 font-medium text-lg text-white/50 pt-2.188 pb-1.875">
                 We help businesses get found, attract more customers and grow
